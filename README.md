@@ -1,6 +1,5 @@
 # How to build and run a Linux CentOS Virtual Machine with OpenShift for Vagrant
 
----------------------------------------
 
 ## Building the local DEV Cluster
 
