@@ -45,7 +45,7 @@ When the Packer process finishes, there should be a `centos-base.box` file in th
 **Note:** Because Guest Additions are propagated to the image from your local VirtualBox, make sure you have version 5.2.12 of VirtualBox installed. 
 
 - Open the terminal and change the directory to the folder with the project.
-- Next, execute the following:
+- Next, execute the following:    
 `packer build -var-file=centos-openshift-variables.json -force centos-openshift.json`
 
 When the Packer process finishes, there should be a centos-7-openshift.box file
@@ -88,9 +88,13 @@ This procedure was tested using:
 
 Steps:
 
-- Upgrade PowerShell to at least version 4.0. The package can be found here: https://www.microsoft.com/en-us/download/details.aspx?id=40855. You need to upgrade PowerShell, because it is used internally by Vagrant and the old version of PowerShell made Vagrant freeze.
-- Install Vagrant from here: https://www.vagrantup.com/downloads.html and add it to the PATH system variable.
-- To allow the use of .vagrantuser files, install the Nugrant plugin. 
+- Upgrade PowerShell to at least version 4.0. You need to upgrade PowerShell, because it is used internally by Vagrant and the old version of PowerShell made Vagrant freeze. The package can be found here:    
+https://www.microsoft.com/en-us/download/details.aspx?id=40855.   
+
+- Install Vagrant from here:    
+https://www.vagrantup.com/downloads.html 
+- Add it to the PATH system variable.
+- To allow the use of `.vagrantuser` files, install the Nugrant plugin. 
 - Set the http_proxy and https_proxy environment variables, and then execute the following command:
 
 ```
@@ -119,7 +123,8 @@ This can be done only once, because the proper configuration file will be kept i
 **Note:** Before running any command make sure that all of the files in the project contain Unix style line endings.
 
 - Unset http_proxy and https_proxy environment variables.
-- Add a box (image) to the Vagrant registry. Open the terminal and change the directory to the project folder by executing the following:`vagrant box add metadata.json`
+- Add a box (image) to the Vagrant registry. Open the terminal and change the directory to the project folder by executing the following:    
+`vagrant box add metadata.json`
 - After the command finishes, you can check if the image was added to Vagrant's registry by executing: `vagrant box list`
 
 **Note:** If you already have the image in the repository and want to replace it, remove it first, and then run the command that adds the image again. 
@@ -134,7 +139,8 @@ This can be done only once, because the proper configuration file will be kept i
   * If you are using PowerShell or CMD, your private key has to be in `%USERPROFILE%\.ssh`
 
 If you don't have a private key, you can use `PuTTYgen.exe` to generate one. Notice that the private key should not be password protected.
-To generate a key, please follow the instructions here: https://www.ssh.com/ssh/putty/windows/puttygen 
+To generate a key, please follow the instructions here:    
+https://www.ssh.com/ssh/putty/windows/puttygen 
  
 - Once the key is generated, you need to save it. 
   * If you are using Cygwin, copy the file to `~/.ssh`
