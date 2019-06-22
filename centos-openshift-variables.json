@@ -1,0 +1,5 @@
+{
+    "vm_name": "centos-7-openshift",
+    "proxy_user": "PROXY_USER",
+    "proxy_pass": "PROXY_PASSWORD"
+}
