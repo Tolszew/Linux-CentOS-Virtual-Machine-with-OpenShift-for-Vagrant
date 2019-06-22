@@ -14,7 +14,7 @@ This procedure was tested using the following software:
 - Vagrant 2.0.2
 - VirtualBox 5.2.12
 - Windows 7 SP1
-- CygWin
+- Cygwin
 
 **Note:** All commands must be performed from the project's root directory if not stated otherwise.
 
@@ -31,7 +31,7 @@ The package can be found here: [Packer Package](https://www.microsoft.com/en-us/
 
 **Note:** Before running a command, make sure that all of the files in the project contain Unix style line endings.
 
-- Open CygWin and change the directory to the project folder.
+- Open Cygwin and change the directory to the project folder.
 - Execute the following: `export ISO_URL= #`
        
 **Note:** The value must point either to the URL with the CentOS ISO image, or to the location on the disk (escape backslashes with a backslash). 
@@ -86,7 +86,7 @@ This procedure was tested using:
 - Vagrant 2.1.1
 - VirtualBox 5.2.12
 - Windows 7 SP1
-- CygWin and PowerShell     
+- Cygwin and PowerShell     
 
 **Note:** All Vagrant commands must be executed from the project's root directory. The Vagrant image should be version 1.0.6. Please see the details (below) about how to download the image.
 
