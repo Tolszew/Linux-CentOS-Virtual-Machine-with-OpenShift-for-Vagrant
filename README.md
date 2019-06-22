@@ -10,7 +10,7 @@ This procedure was tested using the following software:
 - Windows 7 SP1
 - CygWin
 
-**Note:** All commands must be performed from the root directory of the project if not stated otherwise.
+**Note:** All commands must be performed from the project's root directory if not stated otherwise.
 
 ### Setup Procedure
 
@@ -81,7 +81,7 @@ This procedure was tested using:
 - Windows 7 SP1
 - CygWin and PowerShell     
 
-**Note:** All Vagrant commands must be executed from the project root directory. The Vagrant image should be version 1.0.6. Please see the details about how to download an image below.
+**Note:** All Vagrant commands must be executed from the project's root directory. The Vagrant image should be version 1.0.6. Please see the details about how to download an image located below.
 
 **Prerequisites:** You have built the local DEV cluster.
 
