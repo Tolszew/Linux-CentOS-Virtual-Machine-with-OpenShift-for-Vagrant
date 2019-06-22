@@ -97,7 +97,7 @@ Steps:
 - Install Vagrant from here: [Vagrant Installation](https://www.vagrantup.com/downloads.html) 
 - Add it to the PATH system variable.
 - To allow the use of `.vagrantuser` files, install the Nugrant plugin. 
-- Set the **http_proxy** and **https_proxy** environment variables**, and then execute the following command:
+- Set the `http_proxy` and `https_proxy` environment variables, and then execute the following command:
 
 ```
     export http_proxy=http://PROXY_USER:PROXY_PASSWORD_HERE@proxy.server.com:80/
