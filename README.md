@@ -127,9 +127,9 @@ This can be done only once, because the proper configuration file will be kept i
 **Note:** Before running a command, make sure that all of the files in the project contain Unix style line endings.
 
 - Unset the http_proxy and https_proxy environment variables.
-- Add a box (image) to the Vagrant registry. Open the terminal and change the directory to the project folder by executing the following:    
-`vagrant box add metadata.json`
-- After the command finishes, you can check if the image was added to Vagrant's registry by executing: `vagrant box list`
+- Add a box (image) to the Vagrant registry. Open the terminal and change the directory to the project folder by executing the following: `vagrant box add metadata.json`
+- After the command finishes, you can check if the image was added to Vagrant's registry by executing:    
+`vagrant box list`
 
 **Note:** If you already have the image in the repository and want to replace it, remove it first, and then run the command that adds the image again. 
 
