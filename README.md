@@ -86,7 +86,7 @@ This procedure was tested using:
 - Windows 7 SP1
 - Cygwin and PowerShell     
 
-**Note:** All Vagrant commands must be executed from the project's root directory. The Vagrant image should be version 1.0.6. Please see the details (below) about how to download the image.
+**Note:** All Vagrant commands must be executed from the project's root directory. The Vagrant image should be version 1.0.6. Please see the details below about how to download the image.
 
 **Prerequisites:** You have built the local DEV cluster.
 
@@ -109,27 +109,27 @@ To encode your password and value, enter a string in place of `PROXY_PASSWORD_HE
 
 - See the box-run project sources here: git.server.com/box-run.git
 
-When both Vagrant and Nugrant are installed, you can choose to use PowerShell or CMD, or continue to use CygWin when working with Vagrant.
+When both Vagrant and Nugrant are installed, you can choose to use PowerShell or CMD, or continue to use Cygwin when working with Vagrant.
 
 - Next, edit the `.vagrantuser` file, and specify the following:
-  * Whether to use CNTLM on guest (details below) 
+  * Whether to use CNTLM for guests (details below) 
   * The memory limit
   * The CPUs assigned
   * Whether additional software needs to be installed
   * Whether to start the GUI
 
 **Important:** If you are running the image for the first time, or the global password has changed, export the following environment variables:
-`PROXY_USER and PROXY_PASS` 
+`PROXY_USER` and `PROXY_PASS` 
 This can be done only once, because the proper configuration file will be kept in VM. Do not HTML-encode the password if it contains non-alphanumeric characters. Instead, wrap it in double quotes.
 
 **Note:** Before running a command, make sure that all of the files in the project contain Unix style line endings.
 
-- Unset the **http_proxy** and **https_proxy** environment variables.
+- Unset the ``http_proxy`` and ``https_proxy`` environment variables.
 - Add a box (image) to the Vagrant registry. Open the terminal and change the directory to the project folder by executing the following: `vagrant box add metadata.json`
 - After the command finishes, you can check if the image was added to Vagrant's registry by executing:    
 `vagrant box list`
 
-**Note:** If you already have the image in the repository and want to replace it, remove it first, and then run the command that adds the image again. 
+**Note:** If you already have the image in the repository and want to replace it, remove it first, and then run the command that adds the image a second time. 
 
 - To remove the existing image, run the following:    
 `vagrant box remove centos-7-openshift.box`
