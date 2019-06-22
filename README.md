@@ -1,7 +1,7 @@
-# How to build and run a Linux CentOS Virtual Machine with OpenShift for Vagrant
+# How to Build and Run a Linux CentOS Virtual Machine with OpenShift for Vagrant
 
 
-## Building the local DEV Cluster
+## Building the Local DEV Cluster
 
 This procedure was tested using the following software:
 
@@ -12,14 +12,14 @@ This procedure was tested using the following software:
 
 **Note:** All commands must be performed from the root directory of the project if not stated otherwise.
 
-### Setup procedure
-____________
+### Setup Procedure
 
 Steps:
 
 - Install Packer from https://www.packer.io 
 - To be able to access Packer from the command line, add it to the PATH system variable.
-- Upgrade PowerShell to at least version 4.0. The package can be found here: https://www.microsoft.com/en-us/download/details.aspx?id=40855
+- Upgrade PowerShell to at least version 4.0.    
+The package can be found here: https://www.microsoft.com/en-us/download/details.aspx?id=40855
 - See the box-build project sources that are on the Git server (git.server.com/box-build.git).
 - Edit the centos-base-variables.json file to specify the credentials for the proxy server. Remember to HTML-encode non-alphanumeric characters.
 
@@ -30,18 +30,18 @@ Steps:
        
 **Note:** The value must point either to the URL with the CentOS ISO image, or to the location on the disk (escape backslashes with a backslash). 
 
-For example: C:\\centos-image.iso 
+For example: `C:\\centos-image.iso` 
 
 The ISO image must be the **DVD** version, found here: http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1804.iso
 
 - Run the following: 
 `packer build -var-file=centos-base-variables.json -force centos-base.json`
 
-When the Packer process finishes there should be a centos-base.box file in the current directory.
+When the Packer process finishes, there should be a `centos-base.box` file in the current directory.
 
- - Next, edit the centos-openshift-variables.json file by specifying the proxy user and proxy password.
+ - Next, edit the `centos-openshift-variables.json` file by specifying the proxy user and proxy password.
 
-**Note:** Because Guest Additions are propagated to the image from your local VirtualBox, make sure you have the proper version of VirtualBox installed - 5.2.12.
+**Note:** Because Guest Additions are propagated to the image from your local VirtualBox, make sure you have version 5.2.12 of VirtualBox installed. 
 
 - Open the terminal and change the directory to the folder with the project.
 - Next, execute the following:
@@ -74,8 +74,6 @@ You're now ready to move on to run the CentOS Virtual Machine on Windows.
 
 ## Running the CentOS Virtual Machine on Windows
 
-_________________
-
 This procedure was tested using:
 
 - Vagrant 2.1.1
@@ -104,7 +102,7 @@ To encode your password and value, enter a string in place of `PROXY_PASSWORD_HE
 
 - See the box-run project sources on the Git server (git.server.com/box-run.git).
 
-When both Vagrant and Nugrant are installed, you can use either PowerShell, CMD, or stick to CygWin when working with Vagrant.
+When both Vagrant and Nugrant are installed, you can choose to use either PowerShell, CMD, or stick to CygWin when working with Vagrant.
 
 - Next, edit the .vagrantuser file and specify the following:
   * Whether to use CNTLM on guest (details below) 
@@ -120,7 +118,7 @@ This can be done only once, because the proper configuration file will be kept i
 **Note:** Before running any command make sure that all of the files in the project contain Unix style line endings.
 
 - Unset http_proxy and https_proxy environment variables.
-- Add a box (image) to the Vagrant registry. Open the terminal and change the directory to the project folder by executing the following: `vagrant box add metadata.json`
+- Add a box (image) to the Vagrant registry. Open the terminal and change the directory to the project folder by executing the following:`vagrant box add metadata.json`
 - After the command finishes, you can check if the image was added to Vagrant's registry by executing: `vagrant box list`
 
 **Note:** If you already have the image in the repository and want to replace it, remove it first, and then run the command that adds the image again. 
@@ -135,17 +133,20 @@ This can be done only once, because the proper configuration file will be kept i
   * If you are using PowerShell or CMD, your private key has to be in `%USERPROFILE%\.ssh`
 
 If you don't have a private key, you can use `PuTTYgen.exe` to generate one. Notice that the private key should not be password protected.
-Please follow the instructions here: https://www.ssh.com/ssh/putty/windows/puttygen 
+To generate a key, please follow the instructions here: https://www.ssh.com/ssh/putty/windows/puttygen 
  
 - Once the key is generated, you need to save it. 
   * If you are using Cygwin, copy the file to `~/.ssh`
   * If you are using Powershell or CMD, save it to `%USERPROFILE%\.ssh as id_rsa`
 
-When the box is successfully deployed in the Vagrant registry, you can run VM by executing the following command: `vagrant up` 
+When the box is successfully deployed in the Vagrant registry, you can run VM by executing the following command:    
+`vagrant up` 
 
-When the VM is up and running, you can SSH to the box by executing the following: `vagrant ssh`
+When the VM is up and running, you can SSH to the box by executing the following:    
+`vagrant ssh`
 
-When you stop working with the instance and want to halt the VM, execute the following: `vagrant halt`
+When you stop working with the instance and want to halt the VM, execute the following:    
+vagrant halt`
 
 
 
