@@ -2,7 +2,7 @@
 
 ---------------------------------------
 
-##Building the local DEV Cluster
+## Building the local DEV Cluster
 
 This procedure was tested using the following software:
 
@@ -13,8 +13,7 @@ This procedure was tested using the following software:
 
 **Note:** All commands must be performed from the root directory of the project if not stated otherwise.
 
-**Setup procedure**
-
+### Setup procedure
 ____________
 
 Steps:
