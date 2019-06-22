@@ -22,7 +22,7 @@ This procedure was tested using the following software:
 
 Steps:
 
-- Install Packer here: [Packer Installation](https://www.packer.io) 
+- Install Packer from here: [Packer Installation](https://www.packer.io) 
 - To be able to access Packer from the command line, add it to the PATH system variable.
 - Upgrade PowerShell to at least version 4.0.    
 The package can be found here: [Packer Package](https://www.microsoft.com/en-us/download/details.aspx?id=40855)
