@@ -73,7 +73,7 @@ Make sure that the credentials are configured for the server with the id user-up
 When the upload is successful, do the following:
 
 - Create a Git Tag for the deployed version: 1.0.X
-- Update `-Dversion` from the above command with 1.0.X+1 pattern and push the file.
+- Next, update `-Dversion` from the above command with the 1.0.X+1 pattern, and push the file.
 
 ### Next Steps
 You're now to install Vagrant in order to run the 'Amazon Web Services DEV' mirror locally.
@@ -99,7 +99,7 @@ Steps:
 - Install Vagrant from here: [Vagrant Installation](https://www.vagrantup.com/downloads.html) 
 - Add it to the PATH system variable.
 - To allow the use of `.vagrantuser` files, install the Nugrant plugin. 
-- Set the http_proxy and https_proxy environment variables, and then execute the following command:
+- Set the **http_proxy and https_proxy environment variables**, and then execute the following command:
 
 ```
     export http_proxy=http://PROXY_USER:PROXY_PASSWORD_HERE@proxy.server.com:80/
@@ -157,7 +157,7 @@ To generate a key, please follow the instructions here: [Puttygen Instructions](
 `vagrant ssh`
 
 - If you want to stop working with the instance and halt the VM, execute the following:    
-vagrant halt`
+`vagrant halt`
 
 
 
