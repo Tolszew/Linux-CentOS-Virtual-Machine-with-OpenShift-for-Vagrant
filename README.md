@@ -55,7 +55,7 @@ When the Packer process finishes, there should be a `centos-base.box` file in th
 
 When the Packer process finishes, there should be a `centos-7-openshift.box` file available.
 
-- Upload the file to the Maven repository: [Maven Repository](mvn.repository.com)    
+- Upload the file to the Maven repository: maven.repository.com    
 Make sure that the credentials are configured for the server with the id user-upload in your `~/.m2/settings.xml`
 - Next, run the following command:
 
