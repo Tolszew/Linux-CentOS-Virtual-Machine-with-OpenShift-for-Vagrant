@@ -92,7 +92,7 @@ This procedure was tested using:
 
 Steps:
 
-- Upgrade PowerShell to at least version 4.0. You need to upgrade PowerShell, because it is used internally by Vagrant and the old version of PowerShell made Vagrant freeze. The package can be found here: [PowerShell Package](https://www.microsoft.com/en-us/download/details.aspx?id=40855)   
+- Upgrade PowerShell to at least version 4.0. You need to upgrade PowerShell is used internally by Vagrant and the old version of PowerShell made Vagrant freeze. The package can be found here: [PowerShell Package](https://www.microsoft.com/en-us/download/details.aspx?id=40855)   
 
 - Install Vagrant from here: [Vagrant Installation](https://www.vagrantup.com/downloads.html) 
 - Add it to the PATH system variable.
