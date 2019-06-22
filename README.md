@@ -25,8 +25,8 @@ Steps:
 - Install Packer from here: [Packer Installation](https://www.packer.io) 
 - To be able to access Packer from the command line, add it to the PATH system variable.
 - Upgrade PowerShell to at least version 4.0.    
-The package can be found here: [Packer Package](https://www.microsoft.com/en-us/download/details.aspx?id=40855)
-- See the box-build project sources that are on the Git Server: git.server.com/box-build.git
+The package can be found here: [Packer Package](https://www.microsoft.com/en-us/download/details.aspx?id=40855)    
+See the box-build project sources that are on the Git Server: git.server.com/box-build.git
 - Edit the [centos-base-variables.json](centos-base-variables.json) file to specify the credentials for the proxy server. Remember to HTML-encode non-alphanumeric characters.
 
 **Note:** Before running a command, make sure that all of the files in the project contain Unix style line endings.
@@ -105,7 +105,7 @@ Steps:
     vagrant plugin install nugrant
 ```
 **Note:** If your password contains non-alphanumerical characters, you need to HTML-encode it before exporting variables. 
-To encode your password and value, enter a string in place of `PROXY_PASSWORD_HERE`
+To encode your password and value, enter a string in place of `PROXY_PASSWORD_HERE`     
 See the box-run project sources here: git.server.com/box-run.git
 
 When both Vagrant and Nugrant are installed, you can choose to use PowerShell or CMD, or continue to use Cygwin when working with Vagrant.
@@ -124,7 +124,8 @@ This can be done only once, because the proper configuration file will be kept i
 
 **Note:** Before running a command, make sure that all of the files in the project contain Unix style line endings.
 - Unset the ``http_proxy`` and ``https_proxy`` environment variables.
-- Add a box (image) to the Vagrant registry. Open the terminal and change the directory to the project folder by executing the following: `vagrant box add metadata.json`
+- Add a box (image) to the Vagrant registry. Open the terminal and change the directory to the project folder by executing the following:     
+`vagrant box add metadata.json`
 - After the command finishes, you can check if the image was added to Vagrant's registry by executing:    
 `vagrant box list`
 
@@ -135,10 +136,10 @@ This can be done only once, because the proper configuration file will be kept i
 
 **Note:** The `vagrant box add metadata.json` should be executed only if there is no image in the local repository, or if there is a new version of the image and a fresh one is required.
 
-- Make sure you have a private SHH key locally stored in the correct location. 
+### Generating an SHH Key
+Make sure that you have a private SHH key locally stored in the correct location. 
   * If you are using Cygwin, your private key has to be in `~/.ssh/id_rsa`. 
   * If you are using PowerShell or CMD, your private key has to be in `%USERPROFILE%\.ssh`
-
 If you don't have a private key, you can use `PuTTYgen.exe` to generate one. Notice that the private key should not be password protected.
 To generate a key, please follow the instructions here: [Puttygen Instructions](https://www.ssh.com/ssh/putty/windows/puttygen) 
  
