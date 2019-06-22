@@ -90,10 +90,10 @@ This procedure was tested using:
 
 **Prerequisites:** You have built the local DEV cluster.
 
+### Installing Vagrant Behind the Proxy Server
 Steps:
 
 - Upgrade PowerShell to at least version 4.0. PowerShell is used internally by Vagrant and the old version of PowerShell made Vagrant freeze. The package can be found here: [PowerShell Package](https://www.microsoft.com/en-us/download/details.aspx?id=40855)   
-
 - Install Vagrant from here: [Vagrant Installation](https://www.vagrantup.com/downloads.html) 
 - Add it to the PATH system variable.
 - To allow the use of `.vagrantuser` files, install the Nugrant plugin. 
@@ -106,12 +106,12 @@ Steps:
 ```
 **Note:** If your password contains non-alphanumerical characters, you need to HTML-encode it before exporting variables. 
 To encode your password and value, enter a string in place of `PROXY_PASSWORD_HERE`
-
-- See the box-run project sources here: git.server.com/box-run.git
+See the box-run project sources here: git.server.com/box-run.git
 
 When both Vagrant and Nugrant are installed, you can choose to use PowerShell or CMD, or continue to use Cygwin when working with Vagrant.
 
-- Next, edit the `.vagrantuser` file, and specify the following:
+### Configuring Vagrant
+- Edit the `.vagrantuser` file, and specify the following:
   * Whether to use CNTLM for guests (details below) 
   * The memory limit
   * The CPUs assigned
@@ -123,7 +123,6 @@ When both Vagrant and Nugrant are installed, you can choose to use PowerShell or
 This can be done only once, because the proper configuration file will be kept in VM. Do not HTML-encode the password if it contains non-alphanumeric characters. Instead, wrap it in double quotes.
 
 **Note:** Before running a command, make sure that all of the files in the project contain Unix style line endings.
-
 - Unset the ``http_proxy`` and ``https_proxy`` environment variables.
 - Add a box (image) to the Vagrant registry. Open the terminal and change the directory to the project folder by executing the following: `vagrant box add metadata.json`
 - After the command finishes, you can check if the image was added to Vagrant's registry by executing:    
