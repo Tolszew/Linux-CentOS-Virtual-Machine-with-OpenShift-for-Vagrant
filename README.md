@@ -97,7 +97,7 @@ Steps:
 - Install Vagrant from here: [Vagrant Installation](https://www.vagrantup.com/downloads.html) 
 - Add it to the PATH system variable.
 - To allow the use of `.vagrantuser` files, install the Nugrant plugin. 
-- Set the **http_proxy and https_proxy environment variables**, and then execute the following command:
+- Set the **http_proxy** and **https_proxy** environment variables**, and then execute the following command:
 
 ```
     export http_proxy=http://PROXY_USER:PROXY_PASSWORD_HERE@proxy.server.com:80/
@@ -124,7 +124,7 @@ This can be done only once, because the proper configuration file will be kept i
 
 **Note:** Before running a command, make sure that all of the files in the project contain Unix style line endings.
 
-- Unset the http_proxy and https_proxy environment variables.
+- Unset the **http_proxy** and **https_proxy** environment variables.
 - Add a box (image) to the Vagrant registry. Open the terminal and change the directory to the project folder by executing the following: `vagrant box add metadata.json`
 - After the command finishes, you can check if the image was added to Vagrant's registry by executing:    
 `vagrant box list`
