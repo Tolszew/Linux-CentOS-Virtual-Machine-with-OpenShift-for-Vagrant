@@ -17,7 +17,7 @@ This procedure was tested using the following software:
 - Windows 7 SP1
 - Cygwin
 
-**Note:** All commands must be performed from the project's root directory if not stated otherwise.
+All commands must be performed from the project's root directory if not stated otherwise.
 
 ### Setup Procedure
 
@@ -28,12 +28,12 @@ The package can be found here: [Packer Package](https://www.microsoft.com/en-us/
 See the box-build project sources that are on the Git Server: git.server.com/box-build.git
 - Edit the [centos-base-variables.json](centos-base-variables.json) file to specify the credentials for the proxy server. Remember to HTML-encode non-alphanumeric characters.
 
-**Note:** Before running a command, make sure that all of the files in the project contain Unix style line endings.
+Before running a command, make sure that all of the files in the project contain Unix style line endings.
 
 - Open Cygwin and change the directory to the project folder.
 - Execute the following: `export ISO_URL= #`
        
-**Note:** The value for `#` must point either to the URL with the CentOS ISO image, or to the location on the disk (escape backslashes with a backslash). For example: `C:\\centos-image.iso` 
+ The value for `#` must point either to the URL with the CentOS ISO image, or to the location on the disk (escape backslashes with a backslash). For example: `C:\\centos-image.iso` 
 
 The ISO image must be the **DVD** version. You can find it here: [ISO Image](http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1804.iso)
 
@@ -44,7 +44,7 @@ When the Packer process finishes, there should be a `centos-base.box` file in th
 
  - Next, edit the [centos-openshift-variables.json](centos-openshift-variables.json) file by specifying the `proxy user` and `proxy password`
 
-**Note:** Because Guest Additions are propagated to the image from your local VirtualBox, make sure you have version 5.2.12 of VirtualBox installed. 
+Because Guest Additions are propagated to the image from your local VirtualBox, make sure you have version 5.2.12 of VirtualBox installed. 
 
 - Open the terminal and change the directory to the folder with the project.
 - Next, execute the following:    
@@ -85,9 +85,8 @@ This procedure was tested using:
 - Windows 7 SP1
 - Cygwin and PowerShell     
 
-**Note:** All Vagrant commands must be executed from the project's root directory. The Vagrant image should be version 1.0.6. Please see the details below about how to download the image.
+ All Vagrant commands must be executed from the project's root directory. The Vagrant image should be version 1.0.6. Please see the details below about how to download the image.
 
-**Prerequisites:** You have built the local DEV cluster.
 
 ### Installing Vagrant Behind the Proxy Server
 
@@ -102,7 +101,7 @@ This procedure was tested using:
     export https_proxy=http://PROXY_USER:PROXY_PASSWORD_HERE@proxy.server.com:80/
     vagrant plugin install nugrant
 ```
-**Note:** If your password contains non-alphanumerical characters, you need to HTML-encode it before exporting variables. 
+If your password contains non-alphanumerical characters, you need to HTML-encode it before exporting variables. 
 To encode your password and value, enter a string in place of `PROXY_PASSWORD_HERE`     
 See the box-run project sources here: git.server.com/box-run.git
 
@@ -121,16 +120,16 @@ When both Vagrant and Nugrant are installed, you can choose to use PowerShell or
 `PROXY_USER` and `PROXY_PASS` 
 This can be done only once, because the proper configuration file will be kept in VM. Do not HTML-encode the password if it contains non-alphanumeric characters. Instead, wrap it in double quotes.
 
-**Note:** Before running a command, make sure that all of the files in the project contain Unix style line endings.
+Before running a command, make sure that all of the files in the project contain Unix style line endings.
 - Unset the ``http_proxy`` and ``https_proxy`` environment variables.
 - Add a box (image) to the Vagrant registry. Open the terminal and change the directory to the project folder by executing the following:     
 `vagrant box add metadata.json`
 - After the command finishes, you can check if the image was added to Vagrant's registry by executing:    
 `vagrant box list`
 
-**Note:** The `vagrant box add metadata.json` should be executed only if there is no image in the local repository, or if there is a new version of the image and a fresh one is required. If you already have the image in the repository and want to replace it, remove it first, and then run the command that adds the image a second time. To remove the existing image, run the following command:`vagrant box remove centos-7-openshift.box`
+The `vagrant box add metadata.json` should be executed only if there is no image in the local repository, or if there is a new version of the image and a fresh one is required. If you already have the image in the repository and want to replace it, remove it first, and then run the command that adds the image a second time. To remove the existing image, run the following command:`vagrant box remove centos-7-openshift.box`
 
-**Note:** The `vagrant box add metadata.json` should be executed only if there is no image in the local repository, or if there is a new version of the image and a fresh one is required.
+The `vagrant box add metadata.json` should be executed only if there is no image in the local repository, or if there is a new version of the image and a fresh one is required.
 
 ### Generating an SHH Key
 
