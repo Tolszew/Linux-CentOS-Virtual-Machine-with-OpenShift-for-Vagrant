@@ -76,7 +76,7 @@ When the upload is successful, do the following:
 - Next, update `-Dversion` from the above command with the 1.0.X+1 pattern, and push the file.
 
 ### Next Steps
-You're now to install Vagrant in order to run the 'Amazon Web Services DEV' mirror locally.
+You're now ready to install Vagrant, which will help run the 'Amazon Web Services DEV' mirror locally.
 
 
 ## Running the CentOS Virtual Machine on Windows
