@@ -43,7 +43,7 @@ The ISO image must be the **DVD** version. You can find it here: [ISO Image](htt
 
 When the Packer process finishes, there should be a `centos-base.box` file in the current directory.
 
- - Next, edit the [centos-openshift-variables.json](centos-openshift-variables.json) file by specifying the proxy user and proxy password.
+ - Next, edit the [centos-openshift-variables.json](centos-openshift-variables.json) file by specifying the `proxy user` and `proxy password`
 
 **Note:** Because Guest Additions are propagated to the image from your local VirtualBox, make sure you have version 5.2.12 of VirtualBox installed. 
 
