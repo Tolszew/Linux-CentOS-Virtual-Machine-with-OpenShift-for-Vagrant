@@ -21,7 +21,7 @@ Steps:
 - Upgrade PowerShell to at least version 4.0.    
 The package can be found here: https://www.microsoft.com/en-us/download/details.aspx?id=40855
 - See the box-build project sources that are on the Git server (git.server.com/box-build.git).
-- Edit the centos-base-variables.json file to specify the credentials for the proxy server. Remember to HTML-encode non-alphanumeric characters.
+- Edit the `centos-base-variables.json` file to specify the credentials for the proxy server. Remember to HTML-encode non-alphanumeric characters.
 
 **Note:** Before running a command, make sure that all of the files in the project contain Unix style line endings.
 
