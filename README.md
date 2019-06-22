@@ -68,10 +68,11 @@ When the upload is succesful, do the following:
 - Create a Git Tag for the deployed version: 1.0.X
 - Update `-Dversion` from the above command with 1.0.X+1 pattern and push the file.
 
+## Next Steps
+You're now ready to move on to run the CentOS Virtual Machine on Windows.
 
 
-
-##Running the CentOS Virtual Machine on Windows
+## Running the CentOS Virtual Machine on Windows
 
 _________________
 
