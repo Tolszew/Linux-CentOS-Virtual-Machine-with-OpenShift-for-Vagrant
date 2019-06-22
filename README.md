@@ -109,7 +109,7 @@ Steps:
 **Note:** If your password contains non-alphanumerical characters, you need to HTML-encode it before exporting variables. 
 To encode your password and value, enter a string in place of `PROXY_PASSWORD_HERE`
 
-- See the box-run project sources here: [Git Server](git.server.com/box-run.git).
+- See the box-run project sources here: git.server.com/box-run.git
 
 When both Vagrant and Nugrant are installed, you can choose to use PowerShell or CMD, or continue to use CygWin when working with Vagrant.
 
