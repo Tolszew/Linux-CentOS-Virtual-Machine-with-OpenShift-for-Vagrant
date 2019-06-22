@@ -22,12 +22,12 @@ This procedure was tested using the following software:
 
 Steps:
 
-- Install Packer from https://www.packer.io 
+- Install Packer here: [Packer Installation](https://www.packer.io) 
 - To be able to access Packer from the command line, add it to the PATH system variable.
 - Upgrade PowerShell to at least version 4.0.    
-The package can be found here: https://www.microsoft.com/en-us/download/details.aspx?id=40855
-- See the box-build project sources that are on the Git server (git.server.com/box-build.git).
-- Edit the `centos-base-variables.json` file to specify the credentials for the proxy server. Remember to HTML-encode non-alphanumeric characters.
+The package can be found here: [Packer Package](https://www.microsoft.com/en-us/download/details.aspx?id=40855)
+- See the box-build project sources that are on the Git server: [Git Sources](git.server.com/box-build.git)
+- Edit the [centos-base-variables.json](Linux-CentOS-Virtual-Machine-with-OpenShift-for-Vagrant/centos-base-variables.json)` file to specify the credentials for the proxy server. Remember to HTML-encode non-alphanumeric characters.
 
 **Note:** Before running a command, make sure that all of the files in the project contain Unix style line endings.
 
