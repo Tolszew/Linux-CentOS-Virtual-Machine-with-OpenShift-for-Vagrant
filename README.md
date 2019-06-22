@@ -32,7 +32,8 @@ The package can be found here: https://www.microsoft.com/en-us/download/details.
 
 For example: `C:\\centos-image.iso` 
 
-The ISO image must be the **DVD** version, found here: http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1804.iso
+The ISO image must be the **DVD** version. You can find it here:   
+http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1804.iso
 
 - Run the following: 
 `packer build -var-file=centos-base-variables.json -force centos-base.json`
