@@ -1,6 +1,7 @@
 # How to Build and Run a Linux CentOS Virtual Machine with OpenShift for Vagrant
 
 ## Overview
+
 Because AWS Dev cluster OpenShift runs on RedHat Linux, while Sabre Developers use Windows 7, we need to have access to Linux using Windows. To do this, we need a Virtual Machine provider (VirtualBox in this case). 
 
 The base Linux image is free RedHat compatible CentOS. Added to the base CentOS image is the OpenShift platform, and other required tools, such as Maven, Git, Java and CNTLM to handle Internet access via Sabre corporate proxy. The 'local DEV cluster' image is built using Packer and requires some additional tools/plugins (e.g.: Cygwin).
@@ -19,8 +20,6 @@ This procedure was tested using the following software:
 **Note:** All commands must be performed from the project's root directory if not stated otherwise.
 
 ### Setup Procedure
-
-Steps:
 
 - Install Packer from here: [Packer Installation](https://www.packer.io) 
 - To be able to access Packer from the command line, add it to the PATH system variable.
@@ -91,7 +90,6 @@ This procedure was tested using:
 **Prerequisites:** You have built the local DEV cluster.
 
 ### Installing Vagrant Behind the Proxy Server
-Steps:
 
 - Upgrade PowerShell to at least version 4.0. PowerShell is used internally by Vagrant and the old version of PowerShell made Vagrant freeze. The package can be found here: [PowerShell Package](https://www.microsoft.com/en-us/download/details.aspx?id=40855)   
 - Install Vagrant from here: [Vagrant Installation](https://www.vagrantup.com/downloads.html) 
@@ -111,6 +109,7 @@ See the box-run project sources here: git.server.com/box-run.git
 When both Vagrant and Nugrant are installed, you can choose to use PowerShell or CMD, or continue to use Cygwin when working with Vagrant.
 
 ### Configuring Vagrant
+
 - Edit the `.vagrantuser` file, and specify the following:
   * Whether to use CNTLM for guests (details below) 
   * The memory limit
@@ -126,34 +125,33 @@ This can be done only once, because the proper configuration file will be kept i
 - Unset the ``http_proxy`` and ``https_proxy`` environment variables.
 - Add a box (image) to the Vagrant registry. Open the terminal and change the directory to the project folder by executing the following:     
 `vagrant box add metadata.json`
+
+**Note:** The `vagrant box add metadata.json` should be executed only if there is no image in the local repository, or if there is a new version of the image and a fresh one is required. If you already have the image in the repository and want to replace it, remove it first, and then run the command that adds the image a second time. 
+
 - After the command finishes, you can check if the image was added to Vagrant's registry by executing:    
 `vagrant box list`
-
-**Note:** If you already have the image in the repository and want to replace it, remove it first, and then run the command that adds the image a second time. 
-
 - To remove the existing image, run the following:    
 `vagrant box remove centos-7-openshift.box`
 
 **Note:** The `vagrant box add metadata.json` should be executed only if there is no image in the local repository, or if there is a new version of the image and a fresh one is required.
 
 ### Generating an SHH Key
+
 Make sure that you have a private SHH key locally stored in the correct location. 
   * If you are using Cygwin, your private key has to be in `~/.ssh/id_rsa`. 
   * If you are using PowerShell or CMD, your private key has to be in `%USERPROFILE%\.ssh`
 If you don't have a private key, you can use `PuTTYgen.exe` to generate one. Notice that the private key should not be password protected.
 To generate a key, please follow the instructions here: [Puttygen Instructions](https://www.ssh.com/ssh/putty/windows/puttygen) 
- 
 - Once the key is generated, you need to save it. 
   * If you are using Cygwin, copy the file to `~/.ssh`
   * If you are using Powershell or CMD, save it to `%USERPROFILE%\.ssh as id_rsa`
 
 ### Running the Virtual Machine
+
 - When the box is successfully deployed in the Vagrant registry, you can run VM by executing the following command:    
 `vagrant up` 
-
 - When the VM is up and running, you can SSH to the box by executing the following:    
 `vagrant ssh`
-
 - If you want to stop working with the instance and halt the VM, execute the following:    
 `vagrant halt`
 
