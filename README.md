@@ -76,7 +76,7 @@ When the upload is successful, do the following:
 - Update `-Dversion` from the above command with 1.0.X+1 pattern and push the file.
 
 ### Next Steps
-You're now ready to move on to run the CentOS Virtual Machine on Windows.
+You're now ready to move on to run the CentOS Virtual Machine on Windows and are ready to install Vagrant to run the 'Amazon Web Services DEV' mirror locally.
 
 
 ## Running the CentOS Virtual Machine on Windows
