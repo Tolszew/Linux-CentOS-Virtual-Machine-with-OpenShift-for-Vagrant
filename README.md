@@ -125,13 +125,10 @@ This can be done only once, because the proper configuration file will be kept i
 - Unset the ``http_proxy`` and ``https_proxy`` environment variables.
 - Add a box (image) to the Vagrant registry. Open the terminal and change the directory to the project folder by executing the following:     
 `vagrant box add metadata.json`
-
-**Note:** The `vagrant box add metadata.json` should be executed only if there is no image in the local repository, or if there is a new version of the image and a fresh one is required. If you already have the image in the repository and want to replace it, remove it first, and then run the command that adds the image a second time. 
-
 - After the command finishes, you can check if the image was added to Vagrant's registry by executing:    
 `vagrant box list`
-- To remove the existing image, run the following:    
-`vagrant box remove centos-7-openshift.box`
+
+**Note:** The `vagrant box add metadata.json` should be executed only if there is no image in the local repository, or if there is a new version of the image and a fresh one is required. If you already have the image in the repository and want to replace it, remove it first, and then run the command that adds the image a second time. To remove the existing image, run the following command:`vagrant box remove centos-7-openshift.box`
 
 **Note:** The `vagrant box add metadata.json` should be executed only if there is no image in the local repository, or if there is a new version of the image and a fresh one is required.
 
