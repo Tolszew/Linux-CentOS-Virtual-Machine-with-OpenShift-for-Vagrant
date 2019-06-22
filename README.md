@@ -136,7 +136,7 @@ This can be done only once, because the proper configuration file will be kept i
 - To remove the existing image, run the following:    
 `vagrant box remove centos-7-openshift.box`
 
-**Note:** The `vagrant box add` `metadata.json` should be executed only if there is no image in the local repository, or if there is a new version of the image and a fresh one is required.
+**Note:** The `vagrant box add metadata.json` should be executed only if there is no image in the local repository, or if there is a new version of the image and a fresh one is required.
 
 - Make sure you have a private SHH key locally stored in the correct location. 
   * If you are using Cygwin, your private key has to be in `~/.ssh/id_rsa`. 
