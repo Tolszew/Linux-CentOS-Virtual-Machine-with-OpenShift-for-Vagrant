@@ -1,5 +1,11 @@
 # How to Build and Run a Linux CentOS Virtual Machine with OpenShift for Vagrant
 
+## Overview
+Because AWS Dev cluster OpenShift runs on RedHat Linux, while Sabre Developers use Windows 7, we need to have access to Linux using Windows. To do this, we need a Virtual Machine provider (VirtualBox in this case). 
+
+The base Linux image is free RedHat compatible CentOS. Added to the base CentOS image is the OpenShift platform, and other required tools, such as Maven, Git, Java and CNTLM to handle Internet access via Sabre corporate proxy. The 'local DEV cluster' image is built using Packer and requires some additional tools/plugins (e.g.: Cygwin).
+
+With the built 'local DEV cluster' image available, you can run the 'Amazon Web Services DEV' mirror locally using Vagrant. After starting the virtual machine, you get OpenShift platform ready to use together with developer environment tools and an Internet connection.
 
 ## Building the Local DEV Cluster
 
@@ -64,7 +70,7 @@ When the Packer process finishes, there should be a centos-7-openshift.box file
     -Durl=http://maven.repository.com/content/repositories/releases
     ```     
     
-When the upload is succesful, do the following:
+When the upload is successful, do the following:
 
 - Create a Git Tag for the deployed version: 1.0.X
 - Update `-Dversion` from the above command with 1.0.X+1 pattern and push the file.
