@@ -27,7 +27,7 @@ Steps:
 - Upgrade PowerShell to at least version 4.0.    
 The package can be found here: [Packer Package](https://www.microsoft.com/en-us/download/details.aspx?id=40855)
 - See the box-build project sources that are on the Git server: [Git Sources](git.server.com/box-build.git)
-- Edit the [centos-base-variables.json](Linux-CentOS-Virtual-Machine-with-OpenShift-for-Vagrant/centos-openshift-variables.json) file to specify the credentials for the proxy server. Remember to HTML-encode non-alphanumeric characters.
+- Edit the [centos-base-variables.json](Tolszew/centos-openshift-variables.json) file to specify the credentials for the proxy server. Remember to HTML-encode non-alphanumeric characters.
 
 **Note:** Before running a command, make sure that all of the files in the project contain Unix style line endings.
 
