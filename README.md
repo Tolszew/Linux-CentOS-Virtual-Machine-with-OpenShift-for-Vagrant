@@ -34,7 +34,7 @@ The package can be found here: [Packer Package](https://www.microsoft.com/en-us/
 - Open Cygwin and change the directory to the project folder.
 - Execute the following: `export ISO_URL= #`
        
-**Note:** The value`#` must point either to the URL with the CentOS ISO image, or to the location on the disk (escape backslashes with a backslash). For example: `C:\\centos-image.iso` 
+**Note:** The value for `#` must point either to the URL with the CentOS ISO image, or to the location on the disk (escape backslashes with a backslash). For example: `C:\\centos-image.iso` 
 
 The ISO image must be the **DVD** version. You can find it here: [ISO Image](http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1804.iso)
 
