@@ -33,6 +33,8 @@ Before we begin with the setup, keep in mind that you have to perform all of the
 Next, we need to configure proxy in CentOS.
 - Edit the [centos-base-variables.json](centos-base-variables.json) file to specify the credentials for the proxy server. Remember to HTML-encode non-alphanumeric characters.
 
+### Creating Vagrant Box Files with Cygwin
+
 Now, we have to use Cygwin to run several commands and create the Vagrant box files to run VirtualBox.
 Before running a command, make sure that all of the files in the project contain Unix style line endings.
 
