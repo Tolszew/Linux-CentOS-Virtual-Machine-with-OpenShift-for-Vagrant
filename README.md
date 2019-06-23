@@ -17,16 +17,16 @@ This procedure was tested using the following software:
 - Windows 7 SP1
 - Cygwin
 
-All commands must be performed from the project's root directory if not stated otherwise.
+You need to perform all of the commands from the project's root directory unless otherwise stated.
 
 ### Setting up with Packer
-
-- Install Packer from here: [Packer Installation](https://www.packer.io) 
-- To be able to access Packer from the command line, add it to the PATH system variable.
-- Upgrade PowerShell to at least version 4.0.    
-The package can be found here: [Packer Package](https://www.microsoft.com/en-us/download/details.aspx?id=40855)    
-See the box-build project sources that are on the Git Server: git.server.com/box-build.git
-- Edit the [centos-base-variables.json](centos-base-variables.json) file to specify the credentials for the proxy server. Remember to HTML-encode non-alphanumeric characters.
+ 
+Install Packer from here: [Packer Installation](https://www.packer.io) 
+To access Packer from the command line, you need to add it to the PATH system variable.
+Upgrade PowerShell to at least version 4.0.    
+- The package can be found here: [Packer Package](https://www.microsoft.com/en-us/download/details.aspx?id=40855)    
+Have a look at the box-build project sources on the Git Server: git.server.com/box-build.git
+Edit the [centos-base-variables.json](centos-base-variables.json) file to specify the credentials for the proxy server. Remember to HTML-encode non-alphanumeric characters.
 
 Before running a command, make sure that all of the files in the project contain Unix style line endings.
 
