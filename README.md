@@ -155,7 +155,7 @@ To establish the connection, you need to have a private SHH key locally stored i
 
 Once the key is generated, you need to save it. 
 - If you are using Cygwin, copy the file to `~/.ssh`
-- If you are using Powershell or CMD, save it to `%USERPROFILE%\.ssh as id_rsa`
+- If you are using PowerShell or CMD, save it to `%USERPROFILE%\.ssh as id_rsa`
 
 ### Running the VM
 
