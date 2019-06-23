@@ -6,15 +6,15 @@ We want to run the AWS DEV cluster, which Sabre uses for cloud applications, on 
 
 Because the AWS DEV cluster runs on RedHat Linux, we have to use a Virtual Machine to mirror it on Windows. To do this, we'll be using Vagrant to install and configure the guest OS, and VirtualBox to run it.
 
-To get the guest OS up, we're going to use a free, RedHat-compatible CentOS image, which we'll build with Packer. Packer requires additional tools/plugins, including Cygwin, which is a collection of tools that will help us integrate the two .
+To get the guest OS up, we're going to use a free, RedHat-compatible CentOS image, which we'll build with Packer. Packer requires additional tools/plugins, including Cygwin, which is a collection of tools that will help integrate the Linu environment with Windows applications.
 
 On top of the base CentOS image, we'll be placing the OpenShift platform, and several other tools for handling the Sabre corporate proxy, including Maven, Git, Java, and CNTLM. 
 
-With the built 'local DEV cluster' image available, you can run the 'Amazon Web Services DEV' mirror locally using Vagrant. After starting the virtual machine, you get OpenShift platform ready to use together with developer environment tools and an Internet connection.
+When we're finished building the AWS DEV cluster from the CentOS image, we'll be able to run the 'Amazon Web Services DEV' mirror locally using Vagrant. After starting the virtual machine, we will have the OpenShift platform ready to use together with developer environment tools and an Internet connection.
 
 ## Building the DEV Cluster
 
-This procedure was tested using the following software:
+### Software Used
 
 - Vagrant 2.0.2
 - VirtualBox 5.2.12
