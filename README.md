@@ -50,6 +50,8 @@ To generate the Vagrant box file, run the following command in Cygwin:
 
 When Packer finishes, there should be a `centos-base.box` file in the current directory.
 
+### Configuring the Proxy Environment Variables for OpenShift
+
 Next, we need to configure the proxy environment variables for our OpenShift platform. 
 - Edit the [centos-openshift-variables.json](centos-openshift-variables.json) file by specifying the `proxy user` and `proxy password`
 
