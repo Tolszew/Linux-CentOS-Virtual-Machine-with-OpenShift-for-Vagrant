@@ -164,7 +164,7 @@ When the box is successfully deployed in the Vagrant registry, you can boot the 
 `vagrant up`
 The VM should be up and running in a short time, although you won't see it when it starts. Vagrant doesn't use a UI to run the VM, so you have to SSH to the box in order to interact with the machine. 
 - To do so, execute the following command:    
-`vagrant ssh`
+`vagrant ssh`     
 If at any time you want to stop working with the instance and halt the VM, execute the following command:    
 `vagrant halt`
 
