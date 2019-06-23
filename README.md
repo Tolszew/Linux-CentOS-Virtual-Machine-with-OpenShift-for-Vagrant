@@ -23,7 +23,7 @@ When we're finished building the AWS DEV cluster from the CentOS image, we'll be
 **Vagrant 2.0.2:** The virtual machine manager that will help us setup and configure our VM
 **VirtualBox 5.2.12:** The virtualization application that creates the VM for CentOS    
 
-You need to perform all of the commands from the project's root directory unless otherwise indicated.
+Before we begin with the setup, keep in mind that you have to perform all of the commands from the project's root directory unless otherwise indicated.
 
 ### Setting up with Packer
  
@@ -85,16 +85,17 @@ When the upload is successful, do the following:
 Now you're ready to install Vagrant, which will help you setup your virtual environment.
 
 
-## Running the CentOS Virtual Machine on Windows
+## Installing and Running the CentOS Virtual Machine on Windows
 
-This procedure was tested using:
+The following software was used install and run the VM:
 
 - Vagrant 2.1.1
 - VirtualBox 5.2.12
 - Windows 7 SP1
 - Cygwin and PowerShell     
 
-All Vagrant commands must be executed from the project's root directory. The Vagrant image should be version 1.0.6. See the details below about how to download the image.
+Keep in mind that you will have to execute all Vagrant commands from the project's root directory.     
+The Vagrant image should be version 1.0.6. See the details below about how to download the image.
 
 
 ### Installing Vagrant and Nugrant Behind the Proxy Server
