@@ -20,7 +20,7 @@ When we're finished building the AWS DEV cluster from the CentOS image, we'll be
 **Packer:** An open source tool that will help us build the Vagrant box files so that VirtualBox can run     
 **Cygwin:** You can think of it as an OS that adds a layer on top of Windows and allows us to run Linux applications    
 **Vagrant 2.0.2:** The virtual machine manager that will help us setup and configure our VM
-**VirtualBox 5.2.12:** The virtualization application that creates the VM for centOS    
+**VirtualBox 5.2.12:** The virtualization application that creates the VM for CentOS    
 
 You need to perform all of the commands from the project's root directory unless otherwise indicated.
 
