@@ -6,7 +6,7 @@ We want to run the AWS DEV cluster, which Sabre uses for cloud applications, on 
 
 Because the AWS DEV cluster runs on RedHat Linux, we have to use a virtual machine to mirror it on Windows. To do this, we'll be using Vagrant to install and configure the guest OS, and VirtualBox to run it.
 
-To get the guest OS up, we're going to use a free, RedHat-compatible CentOS image, which we'll build with Packer. Packer requires additional tools/plugins, including Cygwin, which is a collection of tools that will help integrate the Linu environment with Windows applications.
+To get the guest OS up, we're going to use a free, RedHat-compatible CentOS image, which we'll build with Packer. Packer requires additional tools/plugins, including Cygwin, which is a collection of tools that will help integrate the Linux environment with Windows commands.
 
 On top of the base CentOS image, we'll be placing the OpenShift platform, and several other tools for handling the Sabre corporate proxy, including Maven, Git, Java, and CNTLM. 
 
@@ -16,19 +16,23 @@ When we're finished building the AWS DEV cluster from the CentOS image, we'll be
 
 ### Software Used
 **Packer**
-: A tool that will help us build the Centos ISO image.
-**Vagrant 2.0.2**
-: The virtual machine manager application that will help us setup and configure our VM.  
-**VirtualBox 5.2.12**
-**Windows 7 SP1**
+: An open source tool that will help us build the Vagrant box files based on the centOS ISO image so that VirtualBox can run.
 **Cygwin**
+: You can think of it as an OS that adds a layer on top of Windows to enable Linux applications to run.
+**Vagrant 2.0.2**
+: The virtual machine manager that will help us setup and configure our VM.  
+**VirtualBox 5.2.12**
+: The virtualization application that creates the VM for centOS.
+**Windows 7 SP1**
+: Our host Operating System.
+
 
 You need to perform all of the commands from the project's root directory unless otherwise stated.
 
 ### Setting up with Packer
  
 - Install Packer from here: [Packer Installation](https://www.packer.io) 
-- To access Packer from the command line, add it to the PATH system variable.
+- To access Packer from the command line, you must add it to the PATH system variable.
 - Upgrade PowerShell to at least version 4.0.    
 - The package can be found here: [Packer Package](https://www.microsoft.com/en-us/download/details.aspx?id=40855)    
 - Have a look at the box-build project sources on the Git Server: git.server.com/box-build.git
@@ -43,7 +47,7 @@ The value for `#` must point either to the URL with the CentOS ISO image, or to 
 
 Make sure to use the **DVD** version of CentOS ISO. You can find the ISO through one of the mirrors listed here: [ISO Image](http://isoredirect.centos.org/centos/7/isos/x86_64)
 
-To generate the Vagrant box file for VirtualBox, run the following command: 
+To generate the Vagrant box file for VirtualBox, run the following command in Cygwin: 
 `packer build -var-file=centos-base-variables.json -force centos-base.json`
 
 When the Packer process finishes, there should be a `centos-base.box` file in the current directory.
