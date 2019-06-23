@@ -14,7 +14,7 @@ When we're finished building the AWS DEV cluster from the CentOS image, we'll be
 
 ## Building the DEV Cluster
 
-### Main Software used - Quick Recap
+### Main Software Used - Quick Recap
 **Windows 7 SP1:** Our host operating system
 **CentOS:** Our guest operating system
 **Packer:** An open source tool that will help us build the Vagrant box files so that VirtualBox can run     
