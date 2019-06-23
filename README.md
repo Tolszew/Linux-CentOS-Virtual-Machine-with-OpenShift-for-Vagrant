@@ -137,11 +137,12 @@ To remove the existing image, run the following command:`vagrant box remove cent
 `vagrant box list`
 
 ### Generating an SHH Key
-
-Make sure that you have a private SHH key locally stored in the correct location. 
+Secure Shell is used to connect Vagrant with your Windows environment.
+To establish the connection, you need to have a private SHH key locally stored in the correct location. 
   * If you are using Cygwin, your private key has to be in `~/.ssh/id_rsa`. 
   * If you are using PowerShell or CMD, your private key has to be in `%USERPROFILE%\.ssh`
 If you don't have a private key, you can use `PuTTYgen.exe` to generate one. Make sure that the private key is not be password protected.
+
 To generate a key, follow the instructions here: [Puttygen Instructions](https://www.ssh.com/ssh/putty/windows/puttygen) 
 - Once the key is generated, you need to save it. 
   * If you are using Cygwin, copy the file to `~/.ssh`
@@ -149,11 +150,13 @@ To generate a key, follow the instructions here: [Puttygen Instructions](https:/
 
 ### Running the VM
 
-- When the box is successfully deployed in the Vagrant registry, you can run VM by executing the following command:    
-`vagrant up` 
-- When the VM is up and running, you can SSH to the box by executing the following command:    
+When the box is successfully deployed in the Vagrant registry, you can boot the Virtual Machine. 
+- Execute the following command:    
+`vagrant up`
+The VM should be up and running in a short time, although you won't see it when it starts. Vagrant doesn't use a UI to run the VM, so you have to SSH to the box in order to interact with the machine. 
+- To do so, execute the following command:    
 `vagrant ssh`
-- If you want to stop working with the instance and halt the VM, execute the following command:    
+If at any time you want to stop working with the instance and halt the VM, execute the following command:    
 `vagrant halt`
 
 
