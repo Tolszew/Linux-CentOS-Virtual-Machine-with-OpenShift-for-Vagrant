@@ -19,35 +19,35 @@ This procedure was tested using the following software:
 
 All commands must be performed from the project's root directory if not stated otherwise.
 
-### Setup Procedure
+### Setting up with Packer
 
-- Install Packer from here: [Packer Installation](https://www.packer.io) 
-- To be able to access Packer from the command line, add it to the PATH system variable.
-- Upgrade PowerShell to at least version 4.0.    
+1. Install Packer from here: [Packer Installation](https://www.packer.io) 
+2. To be able to access Packer from the command line, add it to the PATH system variable.
+3. Upgrade PowerShell to at least version 4.0.    
 The package can be found here: [Packer Package](https://www.microsoft.com/en-us/download/details.aspx?id=40855)    
 See the box-build project sources that are on the Git Server: git.server.com/box-build.git
-- Edit the [centos-base-variables.json](centos-base-variables.json) file to specify the credentials for the proxy server. Remember to HTML-encode non-alphanumeric characters.
+4. Edit the [centos-base-variables.json](centos-base-variables.json) file to specify the credentials for the proxy server. Remember to HTML-encode non-alphanumeric characters.
 
 Before running a command, make sure that all of the files in the project contain Unix style line endings.
 
-- Open Cygwin and change the directory to the project folder.
-- Execute the following: `export ISO_URL= #`
+5. Open Cygwin and change the directory to the project folder.
+6. Execute the following: `export ISO_URL= #`
        
- The value for `#` must point either to the URL with the CentOS ISO image, or to the location on the disk (escape backslashes with a backslash). For example: `C:\\centos-image.iso` 
+The value for `#` must point either to the URL with the CentOS ISO image, or to the location on the disk (escape backslashes with a backslash). For example: `C:\\centos-image.iso` 
 
-The ISO image must be the **DVD** version. You can find it here: [ISO Image](http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1804.iso)
+The CentOS ISO image must be the **DVD** version. You can find it through one of the mirrors listed here: [ISO Image](http://isoredirect.centos.org/centos/7/isos/x86_64)
 
-- Run the following: 
+7. Run the following command: 
 `packer build -var-file=centos-base-variables.json -force centos-base.json`
 
 When the Packer process finishes, there should be a `centos-base.box` file in the current directory.
 
- - Next, edit the [centos-openshift-variables.json](centos-openshift-variables.json) file by specifying the `proxy user` and `proxy password`
+8. Next, edit the [centos-openshift-variables.json](centos-openshift-variables.json) file by specifying the `proxy user` and `proxy password`
 
 Because Guest Additions are propagated to the image from your local VirtualBox, make sure you have version 5.2.12 of VirtualBox installed. 
 
-- Open the terminal and change the directory to the folder with the project.
-- Next, execute the following:    
+9. Open the terminal and change the directory to the folder with the project.
+10. Next, execute the following:    
 `packer build -var-file=centos-openshift-variables.json -force centos-openshift.json`
 
 When the Packer process finishes, there should be a `centos-7-openshift.box` file available.
