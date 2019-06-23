@@ -69,8 +69,7 @@ You want the credentials to be configured for the server, with the id user-uploa
 - To upload the file, run the following command:
 
     ```
-    mvn deploy:deploy-file 
-    -DgroupId=com.example \      
+    mvn deploy:deploy-file -DgroupId=com.example \      
     -DartifactId=vagrant-centos-open-shift \    
     -Dversion=1.0.7 \      
     -Dpackaging=box \        
