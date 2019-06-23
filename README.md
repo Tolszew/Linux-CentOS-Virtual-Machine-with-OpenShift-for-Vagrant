@@ -24,7 +24,7 @@ When we're finished building the AWS DEV cluster from the CentOS image, we'll be
 
 Before we begin with the setup, keep in mind that you have to perform all of the commands from the project's root directory unless otherwise indicated.
 
-### Setting up with Packer
+### Setting Up with Packer
  
 - Install Packer from here: [Packer Installation](https://www.packer.io) 
 - To access Packer from the command line, add it to the PATH system variable.
