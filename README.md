@@ -149,7 +149,9 @@ Secure Shell is used to connect Vagrant with your Windows environment.
 To establish the connection, you need to have a private SHH key locally stored in the correct location. 
   * If you are using Cygwin, your private key has to be in `~/.ssh/id_rsa`. 
   * If you are using PowerShell or CMD, your private key has to be in `%USERPROFILE%\.ssh`
-If you don't have a private key, you can use `PuTTYgen.exe` to generate one. Make sure that the private key is not be password protected. To generate a key, follow the instructions here: [Puttygen Instructions](https://www.ssh.com/ssh/putty/windows/puttygen) 
+  * If you don't have a private key, you can use `PuTTYgen.exe` to generate one.     
+  Make sure that the private key is not be password protected.     
+  To generate a key, follow the instructions here: [Puttygen Instructions](https://www.ssh.com/ssh/putty/windows/puttygen) 
 
 Once the key is generated, you need to save it. 
 - If you are using Cygwin, copy the file to `~/.ssh`
