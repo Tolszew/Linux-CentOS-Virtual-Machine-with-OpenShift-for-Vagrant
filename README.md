@@ -18,7 +18,8 @@ When we're finished building the AWS DEV cluster from the CentOS image, we'll be
 **Windows 7 SP1:** Our host operating system
 **CentOS:** Our guest operating system
 **Packer:** An open source tool that will help us build the Vagrant box files so that VirtualBox can run     
-**Cygwin:** You can think of it as an OS that adds a layer on top of Windows and allows us to run Linux applications    
+**Cygwin:** You can think of it as an OS that adds a layer on top of Windows and allows us to run Linux applications 
+**PowerShell:** A more refined Command Prompt which Vagrant uses internally.
 **Vagrant 2.0.2:** The virtual machine manager that will help us setup and configure our VM
 **VirtualBox 5.2.12:** The virtualization application that creates the VM for CentOS    
 
