@@ -4,7 +4,7 @@
 
 We want to run the AWS DEV cluster, which Sabre uses for cloud applications, on our Windows 7 OS. This will give our developers more freedom to explore and manoeuvre.  
 
-Because the AWS DEV cluster runs on RedHat Linux, we have to use a Virtual Machine to mirror it on Windows. To do this, we'll be using Vagrant to install and configure the guest OS, and VirtualBox to run it.
+Because the AWS DEV cluster runs on RedHat Linux, we have to use a virtual machine to mirror it on Windows. To do this, we'll be using Vagrant to install and configure the guest OS, and VirtualBox to run it.
 
 To get the guest OS up, we're going to use a free, RedHat-compatible CentOS image, which we'll build with Packer. Packer requires additional tools/plugins, including Cygwin, which is a collection of tools that will help integrate the Linu environment with Windows applications.
 
@@ -15,11 +15,13 @@ When we're finished building the AWS DEV cluster from the CentOS image, we'll be
 ## Building the DEV Cluster
 
 ### Software Used
-
-- Vagrant 2.0.2
-- VirtualBox 5.2.12
-- Windows 7 SP1
-- Cygwin
+**Packer**
+: A tool that will help us build the Centos ISO image.
+**Vagrant 2.0.2**
+: The virtual machine manager application that will help us setup and configure our VM.  
+**VirtualBox 5.2.12**
+**Windows 7 SP1**
+**Cygwin**
 
 You need to perform all of the commands from the project's root directory unless otherwise stated.
 
