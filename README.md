@@ -15,29 +15,24 @@ When we're finished building the AWS DEV cluster from the CentOS image, we'll be
 ## Building the DEV Cluster
 
 ### Tools Used
-**Packer**
-: An open source tool that will help us build the Vagrant box files so that VirtualBox can run.     
-**Cygwin**     
-: You can think of it as an OS that adds a layer on top of Windows to enable Linux applications to run.     
-**Vagrant 2.0.2**     
-: The virtual machine manager that will help us setup and configure our VM.  
-**VirtualBox 5.2.12**     
-: The virtualization application that creates the VM for centOS.     
-**Windows 7 SP1**
-: Our host Operating System.
-
+**Windows 7 SP1:** Our host operating system
+**Packer:** An open source tool that will help us build the Vagrant box files so that VirtualBox can run     
+**Cygwin:** You can think of it as an OS that adds a layer on top of Windows and allows us to run Linux applications    
+**Vagrant 2.0.2:** The virtual machine manager that will help us setup and configure our VM
+**VirtualBox 5.2.12:** The virtualization application that creates the VM for centOS    
 
 You need to perform all of the commands from the project's root directory unless otherwise stated.
 
 ### Setting up with Packer
  
 - Install Packer from here: [Packer Installation](https://www.packer.io) 
-- To access Packer from the command line, you must add it to the PATH system variable.
-- Upgrade PowerShell to at least version 4.0.    
-- The package can be found here: [Packer Package](https://www.microsoft.com/en-us/download/details.aspx?id=40855)    
+- To access Packer from the command line, add it to the PATH system variable.
+- Upgrade PowerShell to at least version 4.0. The package can be found here: [PowerShell](https://www.microsoft.com/en-us/download/details.aspx?id=40855)    
 - Have a look at the box-build project sources on the Git Server: git.server.com/box-build.git
-- To configure proxy in CentOS, edit the [centos-base-variables.json](centos-base-variables.json) file to specify the credentials for the proxy server. Remember to HTML-encode non-alphanumeric characters.
+Next, we need to configure proxy in CentOS.
+- Edit the [centos-base-variables.json](centos-base-variables.json) file to specify the credentials for the proxy server. Remember to HTML-encode non-alphanumeric characters.
 
+Now, we have to use Cygwin to run several commands and create the Vagrant box files to run VirtualBox.
 Before running a command, make sure that all of the files in the project contain Unix style line endings.
 
 - Open Cygwin and change the directory to the project folder.
@@ -47,7 +42,7 @@ The value for `#` must point either to the URL with the CentOS ISO image, or to 
 
 Make sure to use the **DVD** version of CentOS ISO. You can find the ISO through one of the mirrors listed here: [ISO Image](http://isoredirect.centos.org/centos/7/isos/x86_64)
 
-To generate the Vagrant box file for VirtualBox, run the following command in Cygwin: 
+To generate the Vagrant box file, run the following command in Cygwin: 
 `packer build -var-file=centos-base-variables.json -force centos-base.json`
 
 When the Packer process finishes, there should be a `centos-base.box` file in the current directory.
@@ -65,7 +60,7 @@ To create the OpenShift box file, do the following:
 When the Packer process finishes, there should be a `centos-7-openshift.box` file available.
 
 Next, upload the file to the Maven repository: maven.repository.com    
-Make sure that the credentials are configured for the server, with the id user-upload in your `~/.m2/settings.xml`
+You want the credentials to be configured for the server, with the id user-upload in your `~/.m2/settings.xml`
 - To upload the file, run the following command:
 
     ```
@@ -82,10 +77,10 @@ Make sure that the credentials are configured for the server, with the id user-u
 When the upload is successful, do the following:
 
 - Create a Git Tag for the deployed version: 1.0.X
-- update `-Dversion` (from the above command) with the 1.0.X+1 pattern, and push the file.
+- Update `-Dversion` (from the above command) with the 1.0.X+1 pattern, and push the file.
 
 ### Next Steps
-You're now ready to install Vagrant, which will help get our virtual environment up and running.
+You're now ready to install Vagrant, which will help get our virtual environment setup.
 
 
 ## Running the CentOS Virtual Machine on Windows
